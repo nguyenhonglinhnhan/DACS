@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Audio
   layers:
   - Default
   - TransparentFX
@@ -49,6 +50,9 @@ TagManager:
     locked: 0
   - name: ForGroup
     uniqueID: 1592547701
+    locked: 0
+  - name: Item
+    uniqueID: 3160947107
     locked: 0
   m_RenderingLayers:
   - Default
