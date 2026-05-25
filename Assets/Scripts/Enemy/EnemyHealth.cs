@@ -7,7 +7,7 @@ public class EnemyHealth : MonoBehaviour
     // =========================
     // CORE REF
     // =========================
-    public int hp = 99999999;
+    public int hp = 100;
     public Animator anim;
     public EnemyEffectController fx;
     Transform player;
