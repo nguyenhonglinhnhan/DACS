@@ -1,6 +1,12 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Prefabs/Rat.prefab.meta
 guid: 05850b90c6d37c5479c545d8aa4a1e1d
 PrefabImporter:
+========
+guid: 350fd0158a093614d9cbb13e955b490b
+folderAsset: yes
+DefaultImporter:
+>>>>>>>> main:Assets/Physic2D.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
