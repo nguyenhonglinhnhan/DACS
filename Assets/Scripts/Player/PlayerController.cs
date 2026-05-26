@@ -104,6 +104,7 @@ public class PlayerController : MonoBehaviour
     // UNITY
     // =========================================================
 
+    
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -130,6 +131,8 @@ public class PlayerController : MonoBehaviour
     {
         inputActions.Enable();
     }
+
+    
 
     /// <summary>
     /// Tắt Input System khi object disable
@@ -594,4 +597,19 @@ public class PlayerController : MonoBehaviour
             hitBox.bounds.size
         );
     }
+    public class KeyPickup : MonoBehaviour
+{
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (!other.CompareTag("Player")) return;
+        if (other.GetComponent<PlayerController>() == null) return;
+
+        GameManager gm = Object.FindFirstObjectByType<GameManager>();
+        if (gm != null)
+            gm.GameWin();
+
+        Destroy(gameObject);
+    }
+}
+
 }
