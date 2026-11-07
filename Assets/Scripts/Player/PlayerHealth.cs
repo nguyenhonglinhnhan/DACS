@@ -106,5 +106,19 @@ public class PlayerHealth : MonoBehaviour
             rb.bodyType = RigidbodyType2D.Kinematic;
         }
         this.enabled = false;
+         Debug.Log("Before Coroutine"); 
+        StartCoroutine(ShowGameOverAfterDelay(1.5f)); // chỉnh thời gian theo animation
+        Debug.Log("After Coroutine");
     }
+    private IEnumerator ShowGameOverAfterDelay(float delay)
+{
+    Debug.Log("Coroutine Start");
+    yield return new WaitForSeconds(delay);
+    Debug.Log("Delay Finished");
+    if (GameManager.Instance != null)
+    {
+        Debug.Log("Call GameOver");
+        GameManager.Instance.GameOver();
+    }
+}
 }

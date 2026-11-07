@@ -548,39 +548,7 @@ public class PlayerController : MonoBehaviour
                 groundLayer
             );
     }
-    // =========================================================
-    // TAKE DAMAGE
-    // =========================================================
 
-    /// <summary>
-    /// Gọi hàm này khi player bị enemy đánh
-    /// </summary>
-    public void TakeDamage(int damage)
-    {
-        if (isDead)
-            return;
-
-        currentHealth -= damage;
-
-        Debug.Log("Player HP: " + currentHealth);
-
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
-    }
-    // =========================================================
-    // DIE
-    // =========================================================
-
-    void Die()
-    {
-        isDead = true;
-
-        rb.linearVelocity = Vector2.zero;
-
-        anim.SetTrigger("Die");
-    }
     // =========================================================
     // GIZMOS
     // =========================================================
